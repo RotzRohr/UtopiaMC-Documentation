@@ -5,6 +5,7 @@ sidebar_position: 1
 ---
 
 # SkyBlock Introduction
+TEST
 
 Welcome to the SkyBlock wiki! Here you'll find everything you need to know about playing SkyBlock on our server.
 
