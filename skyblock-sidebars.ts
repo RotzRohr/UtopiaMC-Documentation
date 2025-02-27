@@ -15,23 +15,37 @@ const skyblockSidebars: SidebarsConfig = {
         {
             type: 'category',
             label: 'Accessories',
-            items: ['accessories/index'],
+            link: {
+                type: 'doc',
+                id: 'accessories/index',
+            },
+            items: [],
         },
         {
             type: 'category',
             label: 'Armor',
-            items: ['armor/index'],
+            link: {
+                type: 'doc',
+                id: 'armor/index',
+            },
+            items: [],
         },
         {
             type: 'category',
             label: 'Collections',
+            link: {
+                type: 'doc',
+                id: 'collections/index',
+            },
             items: [
-                'collections/index',
                 {
                     type: 'category',
                     label: 'Mining',
+                    link: {
+                        type: 'doc',
+                        id: 'collections/mining/index',
+                    },
                     items: [
-                        'collections/mining/index',
                         'collections/mining/cobblestone',
                         'collections/mining/coal'
                     ]
@@ -39,8 +53,11 @@ const skyblockSidebars: SidebarsConfig = {
                 {
                     type: 'category',
                     label: 'Farming',
+                    link: {
+                        type: 'doc',
+                        id: 'collections/farming/index',
+                    },
                     items: [
-                        'collections/farming/index',
                         'collections/farming/wheat',
                         'collections/farming/carrot'
                     ]
@@ -48,8 +65,11 @@ const skyblockSidebars: SidebarsConfig = {
                 {
                     type: 'category',
                     label: 'Combat',
+                    link: {
+                        type: 'doc',
+                        id: 'collections/combat/index',
+                    },
                     items: [
-                        'collections/combat/index',
                         'collections/combat/rotten-flesh',
                         'collections/combat/bone'
                     ]
@@ -57,8 +77,11 @@ const skyblockSidebars: SidebarsConfig = {
                 {
                     type: 'category',
                     label: 'Fishing',
+                    link: {
+                        type: 'doc',
+                        id: 'collections/fishing/index',
+                    },
                     items: [
-                        'collections/fishing/index',
                         'collections/fishing/raw-fish',
                         'collections/fishing/pufferfish'
                     ]

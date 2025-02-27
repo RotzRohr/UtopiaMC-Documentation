@@ -37,28 +37,10 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        // Disable docs (main tutorial section)
+        docs: false,
+        // Disable blog
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -66,7 +48,7 @@ const config: Config = {
     ],
   ],
 
-  // Add a new plugin configuration for the SkyBlock section
+  // SkyBlock plugin configuration remains unchanged
   plugins: [
     [
       '@docusaurus/plugin-content-docs',
@@ -92,20 +74,17 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
+        // Remove Tutorial navbar item
+        // Remove Blog navbar item
+
+        // Keep only SkyBlock in navbar
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'skyblockSidebar',
           position: 'left',
-          label: 'Tutorial',
-        },
-        // Add SkyBlock to navbar
-        {
-          to: '/skyblock/intro',
           label: 'SkyBlock',
-          position: 'left',
-          activeBaseRegex: `/skyblock/`,
+          docsPluginId: 'skyblock'
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
@@ -119,10 +98,7 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
+            // Remove Tutorial link
             {
               label: 'SkyBlock',
               to: '/skyblock/intro',
@@ -149,13 +125,10 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
+            // Remove Blog link
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/RotzRohr/UtopiaMC-Documentation',
             },
           ],
         },
