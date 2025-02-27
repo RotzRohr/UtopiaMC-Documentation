@@ -66,6 +66,22 @@ const config: Config = {
     ],
   ],
 
+  // Add a new plugin configuration for the SkyBlock section
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'skyblock',
+        path: 'skyblock',
+        routeBasePath: 'skyblock',
+        sidebarPath: './skyblock-sidebars.ts',
+        // Sidebar collapse settings
+        sidebarCollapsible: true,
+        sidebarCollapsed: false,
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -81,6 +97,13 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Tutorial',
+        },
+        // Add SkyBlock to navbar
+        {
+          to: '/skyblock/intro',
+          label: 'SkyBlock',
+          position: 'left',
+          activeBaseRegex: `/skyblock/`,
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
@@ -99,6 +122,10 @@ const config: Config = {
             {
               label: 'Tutorial',
               to: '/docs/intro',
+            },
+            {
+              label: 'SkyBlock',
+              to: '/skyblock/intro',
             },
           ],
         },
