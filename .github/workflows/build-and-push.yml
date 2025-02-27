@@ -33,7 +33,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/utopiamc-docs:latest
-            ghcr.io/${{ github.repository_owner }}/utopiamc-docs:${{ github.sha }}
-          cache-from: type=registry,ref=ghcr.io/${{ github.repository_owner }}/utopiamc-docs:buildcache
-          cache-to: type=registry,ref=ghcr.io/${{ github.repository_owner }}/utopiamc-docs:buildcache,mode=max
+            ghcr.io/rotzrohr/utopiamc-docs:latest
+            ghcr.io/rotzrohr/utopiamc-docs:${{ github.sha }}
+          cache-from: type=registry,ref=ghcr.io/rotzrohr/utopiamc-docs:buildcache
+          cache-to: type=registry,ref=ghcr.io/rotzrohr/utopiamc-docs:buildcache,mode=max
